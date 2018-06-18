@@ -25,7 +25,7 @@ y = tf.matmul(a, w2)
 # 定义损失函数及反向传播方法
 loss = tf.reduce_mean(tf.square(y - y_))
 # train_step = tf.train.GradientDescentOptimizer(0.001).minimize(loss)  # 梯度下降算法
-#train_step = tf.train.MomentumOptimizer(0.001, 0.9).minimize(loss)
+# train_step = tf.train.MomentumOptimizer(0.001, 0.9).minimize(loss)
 train_step = tf.train.AdamOptimizer(0.001).minimize(loss)  # 自适应
 
 # 生成会话，训练STEPS轮
